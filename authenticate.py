@@ -1,5 +1,6 @@
 import streamlit_authenticator as stauth
 import database as deta_db
+import streamlit as st
 
 
 def authenticate():
@@ -24,8 +25,8 @@ def authenticate():
         "cricket_dashboard",
         1,
     )
+
+    st.header("SSC Jena Cricket :cricket_bat_and_ball: ")
+    st.markdown("##")
     name, authentication_status, username = authenticator.login('Login', 'main')
     return name, authentication_status, username, authenticator
-
-
-
